@@ -55,6 +55,16 @@ const schemaMarkup = {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-3VPMN4QMQ1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3VPMN4QMQ1');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col font-sans">
     <header class="border-b border-gray-200 bg-white py-4 px-4 sm:px-6 sticky top-0 z-10 shadow-sm">
