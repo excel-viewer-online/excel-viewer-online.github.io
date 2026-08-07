@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpreadsheetApp from '../components/SpreadsheetApp.jsx';
+---
+
+<Layout 
+  title="Free Online Excel & CSV Viewer - Open Files Securely in Browser"
+  description="View and edit Excel (.xlsx) and CSV files instantly in your browser. 100% free and secure client-side viewer. No data is ever sent to a server."
+>
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Instant Spreadsheet Viewer</h2>
+      <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+        Drag and drop your CSV or Excel files below to view and edit them instantly. Your data never leaves your device.
+      </p>
+    </div>
+
+    <SpreadsheetApp client:only="react" />
+    
+    <div class="mt-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">How it Works</h3>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">1</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900">Drop your file</h4>
+              <p class="text-gray-700 mt-1">Select or drag & drop any .csv, .xls, or .xlsx file into the dropzone above.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">2</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900">View and Edit</h4>
+              <p class="text-gray-700 mt-1">Our powerful in-browser engine parses the data instantly, allowing you to view and make quick edits.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">3</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900">Export</h4>
+              <p class="text-gray-700 mt-1">Save your changes by exporting the data back to your computer with a single click.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-2 bg-green-100 text-green-700 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900">Privacy Guarantee</h3>
+        </div>
+        <p class="text-gray-800 font-medium leading-relaxed mb-5">
+          Most online Excel viewers upload your sensitive business data to their servers for processing. <strong class="text-gray-900 font-bold">We don't.</strong>
+        </p>
+        <ul class="space-y-4">
+          <li class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700"><strong>Zero Server Uploads:</strong> No data, files, or telemetry are ever sent to any server.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700"><strong>Browser-Memory Processing:</strong> When you drop a file, it is processed entirely within your browser's memory using JavaScript.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700"><strong>100% Offline Capable:</strong> Once the page loads, you can disconnect from the internet and it will still work perfectly.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>

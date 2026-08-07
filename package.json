@@ -1,0 +1,39 @@
+{
+  "name": "excel-viewer-online.github.io",
+  "version": "1.0.0",
+  "description": "excel-viewer-online.github.io",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excel-viewer-online/excel-viewer-online.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/excel-viewer-online/excel-viewer-online.github.io/issues"
+  },
+  "homepage": "https://github.com/excel-viewer-online/excel-viewer-online.github.io#readme",
+  "dependencies": {
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "ag-grid-react": "^36.1.0",
+    "astro": "^7.2.0",
+    "lucide-react": "^1.30.0",
+    "papaparse": "^5.5.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^3.4.19",
+    "xlsx": "^0.18.5"
+  }
+}
