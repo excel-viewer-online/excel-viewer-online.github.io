@@ -24,6 +24,7 @@
   "homepage": "https://github.com/excel-viewer-online/excel-viewer-online.github.io#readme",
   "dependencies": {
     "@astrojs/react": "^6.0.2",
+    "@astrojs/sitemap": "^3.7.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "ag-grid-react": "^36.1.0",

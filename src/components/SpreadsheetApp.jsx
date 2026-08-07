@@ -163,7 +163,7 @@ export default function SpreadsheetApp() {
         <div className="p-4 border-b border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-gray-50">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
-              <FileSpreadsheet size={20} />
+              <FileSpreadsheet aria-hidden="true" size={20} />
             </div>
             <div>
               <h3 className="font-semibold text-gray-900">{fileName}</h3>
@@ -173,17 +173,19 @@ export default function SpreadsheetApp() {
           <div className="flex items-center gap-3">
             <button
               onClick={handleExport}
+              aria-label="Export file"
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
             >
-              <Download size={16} />
+              <Download aria-hidden="true" size={16} />
               Export {fileType.toUpperCase()}
             </button>
             <button
               onClick={handleReset}
+              aria-label="Close file"
               className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
               title="Close File"
             >
-              <X size={20} />
+              <X aria-hidden="true" size={20} />
             </button>
           </div>
         </div>
@@ -207,13 +209,17 @@ export default function SpreadsheetApp() {
   return (
     <div className="w-full">
       {error && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3 text-red-700">
-          <AlertCircle className="shrink-0 mt-0.5" size={20} />
+        <div role="alert" className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3 text-red-700">
+          <AlertCircle aria-hidden="true" className="shrink-0 mt-0.5" size={20} />
           <p className="text-sm font-medium">{error}</p>
         </div>
       )}
       
       <div
+        role="button"
+        aria-label="File upload dropzone"
+        tabIndex="0"
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') document.getElementById('file-upload').click(); }}
         className={`w-full max-w-3xl mx-auto p-6 sm:p-12 border-2 rounded-2xl transition-all duration-200 ease-in-out text-center cursor-pointer
           ${isDragging 
             ? 'border-solid border-blue-600 bg-blue-50 scale-[1.02] ring-4 ring-blue-500/20' 
@@ -225,7 +231,7 @@ export default function SpreadsheetApp() {
         onClick={() => document.getElementById('file-upload').click()}
       >
         <div className="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-          <Upload size={32} strokeWidth={2.5} />
+          <Upload aria-hidden="true" size={32} strokeWidth={2.5} />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           Drop your CSV or Excel file here
@@ -248,6 +254,7 @@ export default function SpreadsheetApp() {
         
         <input
           id="file-upload"
+          aria-label="Upload file"
           type="file"
           className="hidden"
           accept=".csv, .xlsx, .xls"

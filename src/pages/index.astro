@@ -16,10 +16,35 @@ import SpreadsheetApp from '../components/SpreadsheetApp.jsx';
     </div>
 
     <SpreadsheetApp client:only="react" />
+
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to view and edit Excel or CSV files online",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Drop your file",
+            "text": "Select or drag & drop any .csv, .xls, or .xlsx file into the dropzone."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "View and Edit",
+            "text": "Our powerful in-browser engine parses the data instantly, allowing you to view and make quick edits."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Export",
+            "text": "Save your changes by exporting the data back to your computer with a single click."
+          }
+        ]
+      })}
+    </script>
     
     <div class="mt-24 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h3 class="text-2xl font-bold text-gray-900 mb-6">How it Works</h3>
+      <section aria-labelledby="how-it-works-title">
+        <h3 id="how-it-works-title" class="text-2xl font-bold text-gray-900 mb-6">How it Works</h3>
         <div class="space-y-6">
           <div class="flex gap-4">
             <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">1</div>
@@ -43,33 +68,33 @@ import SpreadsheetApp from '../components/SpreadsheetApp.jsx';
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
-      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+      <section aria-labelledby="privacy-guarantee-title" class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
         <div class="flex items-center gap-3 mb-6">
           <div class="p-2 bg-green-100 text-green-700 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900">Privacy Guarantee</h3>
+          <h3 id="privacy-guarantee-title" class="text-2xl font-bold text-gray-900">Privacy Guarantee</h3>
         </div>
         <p class="text-gray-800 font-medium leading-relaxed mb-5">
           Most online Excel viewers upload your sensitive business data to their servers for processing. <strong class="text-gray-900 font-bold">We don't.</strong>
         </p>
         <ul class="space-y-4">
           <li class="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
             <span class="text-gray-700"><strong>Zero Server Uploads:</strong> No data, files, or telemetry are ever sent to any server.</span>
           </li>
           <li class="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
             <span class="text-gray-700"><strong>Browser-Memory Processing:</strong> When you drop a file, it is processed entirely within your browser's memory using JavaScript.</span>
           </li>
           <li class="flex gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
             <span class="text-gray-700"><strong>100% Offline Capable:</strong> Once the page loads, you can disconnect from the internet and it will still work perfectly.</span>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   </div>
 </Layout>
